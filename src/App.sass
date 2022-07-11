@@ -1,0 +1,94 @@
+*
+    box-sizing: border-box
+
+body
+    margin: 0
+    font-family: sans-serif
+
+
+#home
+    min-height: 100vh
+    background-size: cover
+    background-position: center
+    background-color: #fcfcfc
+    display: flex
+    align-items: center
+    >div
+        display: flex
+        flex-direction: column
+        max-width: 1700px
+        margin: 50px auto
+        padding: 40px 0
+        justify-content: space-around
+        align-items: center
+    .search-input
+        display: flex
+        width: 100%
+        max-width: 900px
+        margin-bottom: 20px
+        form
+            width: 100%
+            border-radius: 1.3rem
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+        input
+            width: CALC(100% - 110px)
+            padding: 12px 20px
+            font-size: 1.2rem
+            border-top-left-radius: 1.3rem
+            border-bottom-left-radius: 1.3rem
+            border: 1px solid #ccc
+        button
+            width: 110px
+            padding: 12px 20px
+            font-size: 1.2rem
+            border-top-right-radius: 1.3rem
+            border-bottom-right-radius: 1.3rem
+            border: 1px solid #ccc
+            background-color: #004EA5
+            transition: 300ms all ease-in-out
+            color: #fff
+            &:hover
+                opacity: 0.8
+
+.search-results
+    display: flex
+    flex-wrap: wrap
+    >div
+        width: CALC(25% - 20px)
+        background-color: #efefef
+        height: 350px
+        margin: 10px
+        border-radius: 1.2rem
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+        overflow: hidden
+        position: relative
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .description
+            position: absolute
+            width: CALC(100% - 20px)
+            left: 10px
+            bottom: 10px
+            background-color: rgba(255,255,255,0.7)
+            backdrop-filter: blur(10px)
+            border-radius: 1rem
+            padding: 10px
+            h2
+                font-size: 1.2rem
+            button
+                background-color: #fdfdfd
+                border-radius: 0.5rem
+                padding: 5px 10px
+                border: none
+                
+
+
+
+@media screen and (max-width: 768px)
+    #home
+        padding: 20px 10px
+    .search-results
+        >div
+            width: calc(100% - 20px)
